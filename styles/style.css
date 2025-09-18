@@ -1,0 +1,13 @@
+/* for tailwind intelligence to active */
+@import "tailwindcss";
+
+/* optional: custom layers */
+@layer base {
+  /* base styles */
+}
+@layer components {
+  /* component styles */
+}
+@layer utilities {
+  /* custom utilities */
+}
