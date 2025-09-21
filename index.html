@@ -20,7 +20,58 @@
     <!-- Header Start -->
     <header></header>
     <!-- Main Start -->
-    <main></main>
+    <main>
+      <!-- One section for both search & Result -->
+      <section class="ml-4 mt-4 bg-gray-50">
+        <!-- Search field -->
+        <div class="flex justify-center mb-10">
+          <div class="flex items-center">
+            <input
+              id="search-field"
+              type="text"
+              placeholder="Enter desire phone name..."
+              class="p-2 rounded-md bg-gray-200" />
+            <!-- Search button -->
+            <button onclick="buttonClicked()" class="btn btn-primary">
+              Search Here
+            </button>
+          </div>
+        </div>
+
+        <!-- Modal to show details -->
+        <!-- Open the modal using ID.showModal() method -->
+
+        <dialog id="detailShowBoard" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box w-full">
+            <div id="board-container" class="p-3"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-secondary">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        <!-- Modal End -->
+
+        <!-- Spinner Container -->
+        <div id="loading-spinner" class="text-center hidden">
+          <span class="loading loading-spinner text-secondary my-12"></span>
+        </div>
+
+        <!-- Search Result -->
+        <!-- Parent Container -->
+        <div
+          id="phone-container"
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto p-5"></div>
+        <!-- Load More container -->
+        <div id="load-more" class="text-center hidden mt-3">
+          <button onclick="showAll()" class="btn btn-accent px-5 font-bold">
+            Show All
+          </button>
+        </div>
+      </section>
+    </main>
     <!-- Footer Start -->
     <footer></footer>
     <!-- Scripts -->
